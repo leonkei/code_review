@@ -29,7 +29,11 @@ public:
 	void postorder(tree_node*);
 	void insert(int);
 	void remove(int);
+<<<<<<< HEAD
 };
+=======
+}; 
+>>>>>>> 40099a6cb4505ea9850905fccc3ca6f137382534
 
 // Smaller elements go left
 // larger elements go right
@@ -91,7 +95,7 @@ void BinarySearchTree::remove(int d)
 	}
 	if (!found)
 	{
-		cout << " Data found! " << endl;
+		cout << " Data not found! " << endl;
 		return;
 	}
 
@@ -102,7 +106,7 @@ void BinarySearchTree::remove(int d)
 	// 3. we're removing a node with 2 children
 
 	// Node with single child
-	if ((curr->left == NULL & curr->right != NULL) || (curr->left != NULL
+	if ((curr->left == NULL && curr->right != NULL) || (curr->left != NULL
 		&& curr->right == NULL))
 	{
 		if (curr->left == NULL && curr->right != NULL)
@@ -160,7 +164,11 @@ void BinarySearchTree::remove(int d)
 		{
 			//if the node's right child has a left child
 			// Move all the way down left to locate smallest element
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 40099a6cb4505ea9850905fccc3ca6f137382534
 			if (curr->right->left != NULL)
 			{
 				tree_node* lcurr;
@@ -217,7 +225,11 @@ void BinarySearchTree::preorder(tree_node* p)
 	if (p != NULL)
 	{
 		cout << " " << p->data << " ";
+<<<<<<< HEAD
 		if (p->left) preorder(p->left);
+=======
+		if (p->left)  preorder(p->left);
+>>>>>>> 40099a6cb4505ea9850905fccc3ca6f137382534
 		if (p->right) preorder(p->right);
 	}
 	else return;
@@ -279,7 +291,7 @@ int main()
 			break;
 		case 5: cout << " Enter data to be deleted : ";
 			cin >> tmp1;
-			b.remove(ch);
+			b.remove(tmp1);
 			break;
 		case 6: system("pause");
 			return 0;
